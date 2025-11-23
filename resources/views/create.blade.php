@@ -14,7 +14,7 @@
 
 @section("content")
 
-    <form method="POST" action="{{ route("tasks.store") }}">
+    <form method="POST" action="{{ route("task.store") }}">
         @csrf
 
         <div>
