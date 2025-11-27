@@ -12,7 +12,7 @@ Route::get("/", function () {
 
 
 Route::get('/tasks', function ()  {
-    return view('index',["tasks" => Task::latest()->get()]);
+    return view('index',["tasks" => Task::latest()->paginate()]);
 })->name("task.index");
 
 
@@ -40,50 +40,32 @@ Route::get('/tasks/{task}', function (Task $task)  {
 
 Route::post("/tasks", function (TaskRequest $request) {
 
-    // $data = $request->validated();
-    // $task = new Task;
-    // $task->title = $data["title"];
-    // $task->description = $data["description"];
-    // $task->long_description = $data["long_description"];
-
-    // $task->save();
-
     $task = Task::create($request->validated());
 
-    return redirect()->route("task.show", ["task" => $task->id])
+    return redirect()->route("task.show", ["task" => $task])
         ->with("success","Task created succesfully");
 })->name("task.store");
 
 
 Route::put("/tasks/{task}", function (Task $task, TaskRequest $request) {
 
-    // $data = $request->validated();
-    // $task->title = $data["title"];
-    // $task->description = $data["description"];
-    // $task->long_description = $data["long_description"];
-    // $task->save();
 
     $task->update(($request->validated()));
 
-    return redirect()->route("task.show", [$task => $task->id])
+    return redirect()->route("task.show", ["task" => $task])
         ->with("success","Task created succesfully");
 })->name("task.update");
 
-// Route::get("/hello/{name}", function($name){
-//     return "hello " . $name . "!";
-// });
+Route::delete("/tasks/{task}", function(Task $task){
+    $task->delete();
+    return redirect()->route("task.index")
+        ->with("success","Task deleted successfully");
+})->name("task.destroy");
 
 
-// Route::get("/hallo", function(){
-//     return redirect("/hello");
-// });
+Route::put("/tasks/{task}/toggle-complete", function(Task $task){
+    $task->completed = !$task->completed;
+    $task->save();
 
-
-// Route::get("/hillo", function(){
-//     return redirect()->route("hello");
-// });
-
-
-// Route::fallback(function () {
-//     return "Opps sorry";
-// });
+    return redirect()->back()->with("success", "Task updated successfully");
+})->name("tasks.toggle-complete");
