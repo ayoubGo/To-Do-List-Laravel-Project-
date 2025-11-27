@@ -1,59 +1,60 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+📝 Project 1 — To-Do List (Laravel)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A simple but complete To-Do List application built with Laravel, demonstrating core concepts of backend development, routing, controllers, views, database interaction, and CRUD features.
 
-## About Laravel
+🚀 Features
+✔️ Basic Routing
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Organized routes defined in web.php
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Usage of HTTP methods: GET, POST, PUT, DELETE
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+✔️ Controllers
 
-## Learning Laravel
+Clean separation of logic using a TaskController
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+Each controller method handles a specific action (index, create, store, update, delete)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+✔️ Blade Templating
 
-## Laravel Sponsors
+Views created using Laravel’s Blade engine
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Layouts, components, and clean HTML structure
 
-### Premium Partners
+Conditional rendering and loops for displaying tasks
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+✔️ Database Interactions (Eloquent ORM)
 
-## Contributing
+A Task model representing each to-do item
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Simple and readable database queries
 
-## Code of Conduct
+Interacting with MySQL through migrations and the ORM
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+✔️ Full CRUD Operations
 
-## Security Vulnerabilities
+Create new tasks
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Read tasks (list view)
 
-## License
+Update tasks (mark complete / edit)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Delete tasks
+
+Redirects + flash messages after actions
+
+✔️ Form Validation
+
+Validating form inputs using Laravel’s Request classes or $request->validate()
+
+Showing validation error messages in the UI
+
+✔️ Session Handling
+
+Flash messages for success/error feedback
+
+Preserving old input and validation states
+<img width="1775" height="1270" alt="image" src="https://github.com/user-attachments/assets/1d648d3d-0489-4065-af7e-aaf86d4e9f82" />
+<img width="1775" height="1270" alt="image" src="https://github.com/user-attachments/assets/23786b64-956d-4fad-a7d0-45d5c4569193" /><img width="1775" height="1270" alt="image" src="https://github.com/user-attachments/assets/be3c4192-c84c-496a-8578-fa72db8edf36" />
+
+
